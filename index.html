@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://kit.fontawesome.com/5520736aff.js" crossorigin="anonymous"></script>
+    
+    <title>Instagram Photo Feed with Bootstrap</title>
+
+</head>
+<body>
+
+<!--Navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-1" href="#">
+            <i class="fa-brands fa-instagram"  style="color: #050505;"></i>
+            <span class="Instagram" style="color:#050505;">Instagram</span> 
+        </a>
+
+<!--Modal-->
+
+    <div class=" navbar-button justify-content-end" >
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+         Create a new post</button>
+
+         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog">
+             <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <form>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label"><strong>Caption:</strong></label>
+                <textarea class="form-control" id="message-text">Add the caption of your post here</textarea>
+              </div>
+              <div>
+                 <button type="button" class="btn btn-outline-secondary bg-light">
+                 <i class="fa-solid fa-camera" style="color: #000000;"></i></button>
+                 <button type="button" class="btn btn-outline-secondary bg-light">
+                 <i class="fa-solid fa-location-dot" style="color:#000000;"></i></button>
+              </div> 
+            </form>
+            </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+             </div>
+           </div>
+         </div>
+       </div>
+
+<!--Dropdown-->
+
+      <div class="btn-group">
+         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <li class="nav-item dropdown list-unstyled"></li>
+            <i class="fa-solid fa-gear"></i>
+         </button>
+         <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">
+              <p class="text-danger">Log out</p></a></li>
+         </ul>
+      </div>
+   </nav>
+    </div>
+
+<!--Nav tab-->
+
+        <nav>
+            <ul class="nav justify-content-center">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-table-cells" style="color: #000000;"></i></button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-stop" style="color: #3c3b3b;"></i></button>
+            </div>
+            </ul>
+        </nav>
+            <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              
+            
+<!-- Grid images-->
+
+        <div class="container-fluid p-1">
+
+           <div class="row p-1">
+              <div class="col-sm-4"><img src="https://picsum.photos/id/237/500/400 ">
+              </div>
+              <div class="col-sm-4"><img src="https://picsum.photos/id/509/500/400 ">
+              </div>
+              <div class="col-sm-4"><img src="https://picsum.photos/id/669/500/400 ">
+              </div>
+              </div>
+            
+            <div class="row p-1">
+              <div class="col-sm-4 "><img src="https://picsum.photos/id/292/500/400 ">
+              </div>
+              <div class="col-sm-4 "><img src="https://picsum.photos/id/324/500/400 ">
+              </div>
+              <div class="col-sm-4 "><img src="https://picsum.photos/id/106/500/400 ">
+              </div>
+              </div>
+         
+            <div class="row p-1">
+              <div class="col-sm-4 "><img src="https://picsum.photos/id/24/500/400">
+              </div>
+              <div class="col-sm-4 "><img src="https://picsum.photos/id/419/500/400">
+              </div>
+              <div class="col-sm-4 "><img src="https://picsum.photos/id/577/500/400">
+              </div>
+            </div>
+        </div>
+        </div>
+            
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+              
+<!-- Cards post-->
+
+<!--Card1-->
+
+        <div class="container1 mt-5">
+            <div class="row1">
+                <div class="col-12 d-flex justify-content-center">
+                   <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+             <div class="row">
+                <div class="col-6">
+                    <h5>My little fellow</h5>
+                </div>
+                  <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                   03/27</div>
+                </div>
+                    </li>
+                   </ul>
+               </div>
+               <img src="https://picsum.photos/id/237/500/400" class="img">
+               <div class="card-body">
+                 <p class="card-text"><b>834 likes</b><br>This is an example of a very good photo that you can post on Instagram</p>
+               </div>
+             </div>
+           </div>
+<!--Card2-->
+
+          <div class="container2 mt-5">
+              <div class="row2">
+               <div class="col-12 d-flex justify-content-center">
+                  <div class="card" style="width: 30rem;">
+                  <div class="card" style="width: auto;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>The beauty of nature</h5>
+                            </div>
+                <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                   04/27</div>
+                </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <img src="https://picsum.photos/id/509/500/400" class="img">
+                  <div class="card-body">
+                    <p class="card-text"><b>1260 likes</b><br>This is an example of a very good photo that you can post on Instagram</p>
+                  </div>
+                </div>
+              </div>
+
+<!--Card3-->
+
+            <div class="container3 mt-5">
+                <div class="row3">
+                  <div class="col-12 d-flex justify-content-center">
+                  <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <div class="row">
+                           <div class="col-6">
+                             <h5>My best mate</h5>
+                             </div>
+                           <div class="col-6 text-end" style="font-size: 14px; color:#000000;">
+                             05/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/669/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b>589 likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+<!--Card4-->
+
+            <div class="container4 mt-5">
+                <div class="row4">
+                  <div class="col-12 d-flex justify-content-center">
+                    <div class="card" style="width: 30rem;">
+                      <div class="card" style="width: auto;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                          <div class="row">
+                           <div class="col-6">
+                              <h5>From my little garden</h5>
+                            </div>
+                    <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                     06/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/292/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b>769 Likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+<!--Card5-->
+
+            <div class="container5 mt-5">
+                <div class="row5">
+               <div class="col-12 d-flex justify-content-center">
+                 <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <div class="row">
+                           <div class="col-6">
+                             <h5>A perfect plan</h5>
+                             </div>
+                           <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                             08/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/324/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b> 490 Likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+<!--Card6-->
+
+               <div class="container6 mt-5">
+                <div class="row6">
+               <div class="col-12 d-flex justify-content-center">
+                 <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <div class="row">
+                           <div class="col-6">
+                             <h5>Blooming </h5>
+                             </div>
+                           <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                             09/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/106/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b> 903 Likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+
+<!--Card7-->
+
+               <div class="container7 mt-5">
+                <div class="row7">
+               <div class="col-12 d-flex justify-content-center">
+                 <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <div class="row">
+                           <div class="col-6">
+                             <h5>Love words... </h5>
+                             </div>
+                           <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                             10/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/24/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b> 721 Likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+<!--Card8-->
+
+               <div class="container8 mt-5">
+                <div class="row8">
+               <div class="col-12 d-flex justify-content-center">
+                 <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <div class="row">
+                           <div class="col-6">
+                             <h5>Autumn memories </h5>
+                             </div>
+                           <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                             11/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/419/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b>832 Likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+<!--Card9-->
+               <div class="container9 mt-5">
+                <div class="row9">
+               <div class="col-12 d-flex justify-content-center">
+                 <div class="card" style="width: 30rem;">
+                   <div class="card" style="width: auto;">
+                     <ul class="list-group list-group-flush">
+                       <li class="list-group-item">
+                         <div class="row">
+                           <div class="col-6">
+                             <h5>Deer time </h5>
+                             </div>
+                           <div class="col-6 text-end" style="font-size: 14px; color: #000000;">
+                             13/27</div>
+                         </div>
+                       </li>
+                     </ul>
+                   </div>
+                   <img src="https://picsum.photos/id/577/500/400" class="img">
+                   <div class="card-body">
+                     <p class="card-text"><b>1107 Likes</b><br>This is an example of a very good photo that you can post on Instagram.</p>
+                   </div>
+                 </div>
+               </div>
+
+          </div>
+          </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+     
+</body>
+</html>
